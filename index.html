@@ -53,13 +53,19 @@
           <form action="sing.html" method="POST">
             <label for="artist">Artist:</label>
             <div id="artistList">
-              <select name="artist" id="selectedArtist" class="form-control">
+              <select name="artist" id="selectedArtist" class="form-control"
+                ng-model="theSongs"
+                ng-options="value.artist for value in songs">
+                <option>--</option>
               </select>
             </div>
             <br>
             <label for="album">Album:</label>
             <div id="albumList">
-              <select name="album" id="selectedAlbum" class="form-control">
+              <select name="album" id="selectedAlbum" class="form-control"
+                ng-model="theSongs"
+                ng-options="value.album for value in songs">
+                <option>--</option>
               </select>
             </div>
             <label for="genre">Genre:</label>
@@ -86,7 +92,7 @@
         </form>
       </div> 
         <div class="library col-sm-8" id="library">
-          <ul class="songs-list" ng-repeat="song in songs">
+          <ul class="songs-list" ng-repeat="song in songs | filter: theSongs">
             <li>{{song.title}} is by {{song.artist}} on the album {{song.album}} <button ng-click="deleteSong(song)">Delete</button></li>
           </ul>
         </div>

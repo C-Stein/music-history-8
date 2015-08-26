@@ -1,6 +1,7 @@
 app.controller("SongCtrl", function($scope, $q) {
 
   $scope.songs = [];
+  $scope.artists = [];
   
   $scope.addSong = function() {
     $scope.songs.push({"title": $scope.newSongTitle,
@@ -26,7 +27,21 @@ app.controller("SongCtrl", function($scope, $q) {
     return $q(function(resolve, reject) {
 
       $.ajax({
-        url: "./data/allSongs.json"
+        url: "./data/songs.json"
+      })
+      .done(function(response){
+        resolve(response.songs);
+      })
+      .fail(function(xhr, status, error) {
+        reject(error);
+      });
+    });
+  }
+
+  function getMoreSongs() {
+    return $q(function(resolve, reject) {
+      $.ajax({
+        url: "./data/moreSongs.json"
       })
       .done(function(response){
         resolve(response.songs);
@@ -38,8 +53,12 @@ app.controller("SongCtrl", function($scope, $q) {
   }
 
     getSongsList()
-    .then(function(songs){
-      $scope.songs = songs;
+    .then(function(songs1){
+      // $scope.songs = songs;
+      getMoreSongs()
+        .then(function(songs2){
+          $scope.songs = songs1.concat(songs2);
+        })
     }, function(error){
       console.log(error);
     })
