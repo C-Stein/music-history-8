@@ -24,45 +24,50 @@ app.controller("SongCtrl", ["$scope", "$q", "song-storage",
 
   $scope.songs = [];
 
-  function getSongsList() {
-    return $q(function(resolve, reject) {
+  // function getSongsList() {
+  //   return $q(function(resolve, reject) {
 
-      $.ajax({
-        url: "./data/songs.json"
-      })
-      .done(function(response){
-        resolve(response.songs);
-      })
-      .fail(function(xhr, status, error) {
-        reject(error);
-      });
-    });
-  }
+  //     $.ajax({
+  //       url: "./data/songs.json"
+  //     })
+  //     .done(function(response){
+  //       resolve(response.songs);
+  //     })
+  //     .fail(function(xhr, status, error) {
+  //       reject(error);
+  //     });
+  //   });
+  // }
 
-  function getMoreSongs() {
-    return $q(function(resolve, reject) {
-      $.ajax({
-        url: "./data/moreSongs.json"
-      })
-      .done(function(response){
-        resolve(response.songs);
-      })
-      .fail(function(xhr, status, error) {
-        reject(error);
-      });
-    });
-  }
+  song_storage.then(function(data) {
+    console.log("storage data", data);
+    $scope.songs = data;
+  });
 
-    getSongsList()
-    .then(function(songs1){
-      // $scope.songs = songs;
-      getMoreSongs()
-        .then(function(songs2){
-          $scope.songs = songs1.concat(songs2);
-        });
-    }, function(error){
-      console.log(error);
-    });
+  // function getMoreSongs() {
+  //   return $q(function(resolve, reject) {
+  //     $.ajax({
+  //       url: "./data/moreSongs.json"
+  //     })
+  //     .done(function(response){
+  //       resolve(response.songs);
+  //     })
+  //     .fail(function(xhr, status, error) {
+  //       reject(error);
+  //     });
+  //   });
+  // }
+
+  //   getSongsList()
+  //   .then(function(songs1){
+  //     // $scope.songs = songs;
+  //     getMoreSongs()
+  //       .then(function(songs2){
+  //         $scope.songs = songs1.concat(songs2);
+  //       });
+  //   }, function(error){
+  //     console.log(error);
+  //   });
 
   
 }
