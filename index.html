@@ -28,6 +28,7 @@
         <li class="active"><a href="index.html">View Music<span class="sr-only">(current)</span></a></li>
         <li><a href="addMusic.html">Add Music</a></li>
         <li><a href="profile.html">Profile</a></li>
+        <li><a href="/#/songs">Songs</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -55,7 +56,7 @@
             <div id="artistList">
               <select name="artist" id="selectedArtist" class="form-control"
                 ng-model="theSongs"
-                ng-options="value.artist for value in songs">
+                ng-options="value.artist for value in songs | unique:'artist'">
                 <option>--</option>
               </select>
             </div>
@@ -64,7 +65,7 @@
             <div id="albumList">
               <select name="album" id="selectedAlbum" class="form-control"
                 ng-model="theSongs"
-                ng-options="value.album for value in songs">
+                ng-options="value.album for value in songs | unique:'album'">
                 <option>--</option>
               </select>
             </div>
@@ -92,16 +93,18 @@
         </form>
       </div> 
         <div class="library col-sm-8" id="library">
-          <ul class="songs-list" ng-repeat="song in songs | filter: theSongs">
-            <li>{{song.title}} is by {{song.artist}} on the album {{song.album}} <button ng-click="deleteSong(song)">Delete</button></li>
-          </ul>
+          <div ng-view></div>
         </div>
       </div>
     </div>
   </section>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>   
   <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
   <script src="app/app.js"></script>
+  <script src="app/filters/capitalize.js"></script>
+  
   <script src="app/controllers/songs.js"></script>
 </body>
 </html>

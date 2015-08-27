@@ -1,0 +1,11 @@
+<section>
+  <div>
+    <input type="text" ng-model="songSearchText.name" placeholder="Search titles here"/>
+  </div>
+    <ul class="songs-list" ng-repeat="song in songs | filter: theSongs.artist || theSongs.album || songSearchText.name">
+      <li><a href="#/songs/{{ song.id }}">{{ song.title }} </a>is by {{song.artist}} on the album {{song.album}} <button ng-click="deleteSong(song)">Delete</button></li>
+    </ul>
+  <div>
+    
+  </div>
+</section>

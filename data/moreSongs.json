@@ -3,22 +3,32 @@
         {
             "title": "C is for Cookie",
             "artist": "Cookie Monster",
-            "album": "Sesame Street Hits"
+            "album": "Sesame Street Hits",
+            "id": 11
         },
         {
             "title": "If I Had a Million Dollars",
             "artist": "Barenaked Ladies",
-            "album": "Rock Spectacle"
+            "album": "Rock Spectacle",
+            "id": 12
         },
         {
             "title": "Another Brick in the Wall",
             "artist": "Pink Floyd",
-            "album": "The Wall"
+            "album": "The Wall",
+            "id": 13
         },
         {
             "title": "Mars",
             "artist": "Holst",
-            "album": "The Planets"
+            "album": "The Planets",
+            "id": 14
+        },
+        {
+            "title": "Jupiter",
+            "artist": "Holst",
+            "album": "The Planets",
+            "id": 15
         }
     ]
 }
