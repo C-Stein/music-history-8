@@ -1,4 +1,5 @@
-app.controller("SongCtrl", function($scope, $q) {
+app.controller("SongCtrl", ["$scope", "$q", "song-storage", 
+  function($scope, $q, song_storage) {
 
   $scope.songs = [];
   $scope.artists = [];
@@ -58,10 +59,11 @@ app.controller("SongCtrl", function($scope, $q) {
       getMoreSongs()
         .then(function(songs2){
           $scope.songs = songs1.concat(songs2);
-        })
+        });
     }, function(error){
       console.log(error);
-    })
+    });
 
   
-});
+}
+]);

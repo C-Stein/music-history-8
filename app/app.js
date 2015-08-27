@@ -11,7 +11,14 @@ app.config(['$routeProvider',
         templateUrl: 'partials/song-detail.html',
         controller: 'SongDetailCtrl'
       }).
+      when('/profile', {
+        templateUrl: 'partials/profile.html',
+        controller: ''
+      }).
       otherwise({
         redirectTo: '/'
       });
   }]);
+
+
+

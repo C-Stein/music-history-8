@@ -3,62 +3,74 @@
         {
             "title": "Legs",
             "artist": "ZZTop",
-            "album": "Eliminator"
+            "album": "Eliminator", 
+            "id": 1
         },
         {
             "title": "The Logical Song",
             "artist": "Supertramp",
-            "album": "Breakfast in America"
+            "album": "Breakfast in America",
+            "id": 2
         },
         {
             "title": "Another Brick in the Wall",
             "artist": "Pink Floyd",
-            "album": "The Wall"
+            "album": "The Wall",
+            "id": 3
         },
         {
             "title": "Welcome to the Jungle",
             "artist": "Guns and Roses",
-            "album": "Appetite for Destruction"
+            "album": "Appetite for Destruction",
+            "id": 4
         },
         {
             "title": "Ironic",
             "artist": "Alanis Morisette",
-            "album": "Jagged Little Pill"
+            "album": "Jagged Little Pill",
+            "id": 5
         },
         {
             "title": "Come Downstairs and Say Hello",
             "artist": "Guster",
-            "album": "Guster on Ice"
+            "album": "Guster on Ice",
+            "id": 6
         },
         {
             "title": "So What",
             "artist": "Miles Davis",
-            "album": "Kind of Blue"
+            "album": "Kind of Blue",
+            "id": 7
         },
         {
             "title": "C is for Cookie",
             "artist": "Cookie Monster",
-            "album": "Sesame Street Hits"
+            "album": "Sesame Street Hits",
+            "id": 8
         },
         {
             "title": "If I Had a Million Dollars",
             "artist": "Barenaked Ladies",
-            "album": "Rock Spectacle"
+            "album": "Rock Spectacle",
+            "id": 9
         },
         {
             "title": "Another Brick in the Wall",
             "artist": "Pink Floyd",
-            "album": "The Wall"
+            "album": "The Wall",
+            "id": 10
         },
         {
             "title": "Mars",
             "artist": "Holst",
-            "album": "The Planets"
+            "album": "The Planets",
+            "id": 11
         },
         {
             "title": "Jupiter",
             "artist": "Holst",
-            "album": "The Planets"
+            "album": "The Planets",
+            "id": 12
         }
     ]
 }

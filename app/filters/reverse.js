@@ -3,5 +3,5 @@ app.filter('reverse', function() {
     if (input !== null) {
       return input.split("").reverse().join("");
     }
-  }
+  };
 });

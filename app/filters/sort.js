@@ -3,5 +3,5 @@ app.filter('sort', function() {
     if (input !== null) {
       return input.split("").sort().join("");
     }
-  }
+  };
 });
