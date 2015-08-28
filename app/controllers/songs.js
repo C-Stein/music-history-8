@@ -1,8 +1,16 @@
-app.controller("SongCtrl", ["$scope", "$q", "song-storage", 
-  function($scope, $q, song_storage) {
+app.controller("SongCtrl", ["$scope", "$q", "$firebaseObject", 
+  function($scope, $q, $firebaseObject) {
 
-  $scope.songs = [];
+
+  var ref = new Firebase("https://vivid-heat-717.firebaseio.com/songs");
+   
+      
+
+  $scope.songs = $firebaseObject(ref);
   $scope.artists = [];
+
+  console.log($scope.songs);
+
   
   $scope.addSong = function() {
     $scope.songs.push({"title": $scope.newSongTitle,
@@ -21,54 +29,6 @@ app.controller("SongCtrl", ["$scope", "$q", "song-storage",
       $scope.songs.splice(songIndex, 1);
     }
   };
-
-  $scope.songs = [];
-
-  // function getSongsList() {
-  //   return $q(function(resolve, reject) {
-
-  //     $.ajax({
-  //       url: "./data/songs.json"
-  //     })
-  //     .done(function(response){
-  //       resolve(response.songs);
-  //     })
-  //     .fail(function(xhr, status, error) {
-  //       reject(error);
-  //     });
-  //   });
-  // }
-
-  song_storage.then(function(data) {
-    console.log("storage data", data);
-    $scope.songs = data;
-  });
-
-  // function getMoreSongs() {
-  //   return $q(function(resolve, reject) {
-  //     $.ajax({
-  //       url: "./data/moreSongs.json"
-  //     })
-  //     .done(function(response){
-  //       resolve(response.songs);
-  //     })
-  //     .fail(function(xhr, status, error) {
-  //       reject(error);
-  //     });
-  //   });
-  // }
-
-  //   getSongsList()
-  //   .then(function(songs1){
-  //     // $scope.songs = songs;
-  //     getMoreSongs()
-  //       .then(function(songs2){
-  //         $scope.songs = songs1.concat(songs2);
-  //       });
-  //   }, function(error){
-  //     console.log(error);
-  //   });
-
   
 }
 ]);

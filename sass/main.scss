@@ -33,20 +33,28 @@ background-size: 100px 100px;
   padding: 15px;
 }
 
+h1 {
+  text-align: center;
+}
+
 .songItem {
   background-color: $color1;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
 }
 .songItem:nth-of-type(2n) {
   background-color: white;
 }
 
-.songItem {
-  text-align: center;
-  margin: 0;
-  padding: 8px 0;
+#searchBox {
+  padding:5px;
+  border: 2px solid #ff3caa;
+  color:#000;
+  border-radius: 5px;
+  text-decoration:none;
+  margin: 0 40% 15px 40%;
 }
-
-
 
 /*********** Options Form info **************/
 
@@ -97,10 +105,9 @@ form {
 }
 
 @import 'nav';
-@import 'slider-styles';
 @import 'buttons';
 @import 'addMusic';
-
+@import 'song-detail-partial';
 
 
 

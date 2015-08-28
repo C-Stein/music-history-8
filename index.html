@@ -44,7 +44,7 @@
             <div id="artistList">
               <select name="artist" id="selectedArtist" class="form-control"
                 ng-model="theSongs"
-                ng-options="value.artist for value in songs | unique:'artist'">
+                ng-options="value.artist for value in songs">
                 <option>--</option>
               </select>
             </div>
@@ -53,7 +53,7 @@
             <div id="albumList">
               <select name="album" id="selectedAlbum" class="form-control"
                 ng-model="theSongs"
-                ng-options="value.album for value in songs | unique:'album'">
+                ng-options="value.album for value in songs">
                 <option>--</option>
               </select>
             </div>
@@ -88,11 +88,19 @@
   </section>
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>   
   <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/firebase/firebase.js"></script>
+  <script src="/bower_components/angularfire/dist/angularfire.min.js"></script>
   <script src="/bower_components/angular-filter/dist/angular-filter.min.js"></script>
   <script src="/bower_components/angular-route/angular-route.js"></script>
+
   <script src="app/app.js"></script>
+
   <script src="app/factories/song-storage.js"></script>
+  <script src="app/factories/fb.js"></script>
+
   <script src="app/filters/capitalize.js"></script> 
+  <script src="app/filters/firebaseUnique.js"></script> 
+
   <script src="app/controllers/songs.js"></script>
   <script src="app/controllers/song-detail.js"></script>
 </body>

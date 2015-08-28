@@ -1,4 +1,4 @@
-var app = angular.module("MusicApp", ['ngRoute', 'angular.filter']);
+var app = angular.module("MusicApp", ['firebase', 'ngRoute', 'angular.filter']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
@@ -15,6 +15,10 @@ app.config(['$routeProvider',
         templateUrl: 'partials/profile.html',
         controller: ''
       }).
+      // when('/addMusic', {
+      //   templateUrl: 'partials/addMusic.html',
+      //   controller: ''
+      // }).
       otherwise({
         redirectTo: '/'
       });

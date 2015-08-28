@@ -1,9 +1,10 @@
 <section>
+  <h1>Totally Radical Songs</h1>
   <div>
-    <input type="text" ng-model="songSearchText.title" placeholder="Search titles here"/>
+    <input type="text" ng-model="songSearchText.title" placeholder="Search titles here" id="searchBox"/>
   </div>
-    <ul class="songs-list" ng-repeat="song in songs | filter: theSongs.artist || theSongs.album || songSearchText">
-      <li><a href="#/songs/{{ song.id }}">{{ song.title }} </a>is by {{song.artist}} on the album {{song.album}} <button ng-click="deleteSong(song)">Delete</button></li>
+    <ul class="songs-list" ng-repeat="song in songs">
+      <li><a href="#/songs/{{ song.id }}">{{ song.title }} </a>is by {{song.artist}} on the album {{song.album}} <input type="button" ng-click="deleteSong(song)" value="Delete" class="delete"></li>
     </ul>
   <div>
     
