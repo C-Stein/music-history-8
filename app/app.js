@@ -15,10 +15,10 @@ app.config(['$routeProvider',
         templateUrl: 'partials/profile.html',
         controller: ''
       }).
-      // when('/addMusic', {
-      //   templateUrl: 'partials/addMusic.html',
-      //   controller: ''
-      // }).
+      when('/addMusic', {
+        templateUrl: 'partials/addMusic.html',
+        controller: ''
+      }).
       otherwise({
         redirectTo: '/'
       });
