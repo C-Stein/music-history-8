@@ -20,8 +20,8 @@ Note: No songs will appear unless you have loggin in and previously added some
 
 ###Requirements:
 
-Nodejs
-Bower
+- Nodejs
+- Bower
 
 ##Installation Instructions
 
