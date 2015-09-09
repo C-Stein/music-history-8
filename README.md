@@ -1,5 +1,27 @@
-# music-history-8
+# NSS Project: music-history-8
+ 
+###Functionality
 
-Create, Read, Update, and Delete music entries. Authentication with OAuth and github. Click on "songs" in the nav bar to see any songs you have saved.
+This implements github OAuth login. Once user is logged in they can see their songs, filter their songs, or add new songs on this single page angular app.
+Note: No songs will appear unless you have loggin in and previously added some
 
-The final iteration of the music history project, this time refactored to use angular. Three way binding with firebase is especially cool, in my opinion.
+###Technologies used:
+
+AngularJS *Angular Filter *Angular Routes *Custom Directives
+Oauth - Git
+Grunt
+Firebase
+jQuery
+Bootstrap
+lodash
+
+###Requirements:
+
+Nodejs
+Bower
+
+##Installation Instructions
+
+git clone https://github.com/C-Stein/music-history-8.git && cd music-history-8
+npm install May take a few minutes to download all dependencies, also runs bower install.
+
