@@ -7,13 +7,16 @@ Note: No songs will appear unless you have loggin in and previously added some
 
 ###Technologies used:
 
-AngularJS *Angular Filter *Angular Routes *Custom Directives
-Oauth - Git
-Grunt
-Firebase
-jQuery
-Bootstrap
-lodash
+-AngularJS 
+-Angular Filter 
+-Angular Routes 
+-Custom Directives
+-Oauth with Git
+-Grunt
+-Firebase
+-jQuery
+-Bootstrap
+-lodash
 
 ###Requirements:
 
